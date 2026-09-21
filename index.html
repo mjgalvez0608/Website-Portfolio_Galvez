@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mark Jaiden Galvez — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Belleza&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.mjg-cert-stage{pointer-events:none!important}
+.mjg-cert-stage .mjg-cert-img{display:none;width:100%;height:auto;max-height:68vh;object-fit:contain;border-radius:8px;background:#fff}
+.mjg-cert-stage.has-photo{width:min(92vw,760px)!important;max-width:none!important;height:auto!important;min-height:0!important;aspect-ratio:auto!important;max-height:94vh;display:flex;flex-direction:column;justify-content:flex-start;gap:14px}
+.mjg-cert-stage.has-photo .mjg-cert-img{display:block}
+.mjg-cert-stage.has-photo .mjg-mark{display:none}
+.mjg-cert-card{position:relative;overflow:hidden;isolation:isolate}
+.mjg-cert-thumb{position:absolute;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.mjg-cert-thumb img{width:100%;height:100%;object-fit:cover;display:block;filter:blur(6px) saturate(.9);transform:scale(1.12);opacity:.6;transition:filter .35s ease,opacity .35s ease}
+.mjg-cert-thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,18,56,.35) 0%,rgba(8,18,56,.8) 100%)}
+.mjg-cert-card:hover .mjg-cert-thumb img,.mjg-cert-card:focus .mjg-cert-thumb img{filter:blur(2px);opacity:.8}
+</style>
+</head>
+<body>
+
+<nav class="mjg-nav" id="nav">
+  <div class="mjg-wrap">
+    <a class="mjg-brand" href="#home">
+      <span class="mjg-brand-mark"><svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2.5 1.8V22l3.5-1 3.5 1v-1.2L12 19v-5.5z"/></svg></span>
+      MJG
+    </a>
+    <ul class="mjg-nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Projects &amp; Certificates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="mjg-nav-cta" href="#contact">Let's Talk</a>
+    <button class="mjg-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mjg-mobile-panel" id="mobilePanel">
+  <a href="#home">Home</a>
+  <a href="#overview">Overview</a>
+  <a href="#about">About</a>
+  <a href="#work">Projects &amp; Certificates</a>
+  <a href="#contact">Contact</a>
+  <a class="mjg-nav-cta" href="#contact">Talk to me</a>
+</div>
+
+<header class="mjg-hero" id="home">
+  <div class="mjg-hero-bg"></div>
+  <div class="mjg-wrap">
+    <div class="mjg-eyebrow"><span class="mjg-line"></span> Holy Angel University</div>
+    <h1><span class="mjg-l1">Where Code</span><span class="mjg-l2">Meets the Skies</span></h1>
+    <p class="mjg-hero-sub">Software Development &middot; Campus Journalism &middot; UI Design</p>
+    <div class="mjg-hero-cta-row">
+      <a class="mjg-btn-fill" href="#work">View My Work
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="mjg-btn-ghost" href="#about">My Story</a>
+    </div>
+    <div class="mjg-hero-stats">
+      <div><div class="mjg-num">10+</div><div class="mjg-lab">Projects Built</div></div>
+      <div><div class="mjg-num">4</div><div class="mjg-lab">Student Orgs</div></div>
+      <div><div class="mjg-num">HAU</div><div class="mjg-lab">School of Computing</div></div>
+    </div>
+    <div class="mjg-hero-contact-bar">
+      <p>Have a project or a story to build together?</p>
+      <a href="#contact">Get in touch <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</header>
+
+<section class="mjg-overview" id="overview">
+  <div class="mjg-wrap">
+    <div class="mjg-section-head mjg-reveal">
+      <span class="mjg-kicker">Overview</span>
+      <h2>Building things at the intersection of logic and story.</h2>
+      <p>I'm a Computing student who splits my time between writing code and covering campus life through a camera lens. Two disciplines that both come down to the same habit: paying close attention, then shaping what you find into something clear.</p>
+    </div>
+    <div class="mjg-pillars mjg-reveal">
+      <div class="mjg-pillar">
+        <div class="mjg-n">01</div>
+        <h3>Development</h3>
+        <p>Building functional, well-structured software, from coursework projects to independent builds.</p>
+      </div>
+      <div class="mjg-pillar">
+        <div class="mjg-n">02</div>
+        <h3>Design</h3>
+        <p>Clean, purposeful interfaces that make a product easier to use, not just nicer to look at.</p>
+      </div>
+      <div class="mjg-pillar">
+        <div class="mjg-n">03</div>
+        <h3>Storytelling</h3>
+        <p>Photojournalism for my campus publication, documenting events with an editorial eye.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mjg-about" id="about">
+  <div class="mjg-wrap">
+    <div class="mjg-about-photo mjg-reveal">
+      <img src="mjg.jpg" alt="Mark Jaiden Galvez">
+      <div class="mjg-tag">MJG</div>
+    </div>
+    <div class="mjg-about-body mjg-reveal">
+      <span class="mjg-kicker" style="color:var(--mjg-gold)">About</span>
+      <h2>Mark Jaiden Galvez</h2>
+      <p>I'm a college student studying Computing, currently working across coursework, personal projects, and campus publication assignments. I'm active in four student organizations — The Angelite, the League of Outstanding Programmers, Code Geeks, and Google Developer Groups on Campus - HAU — where I get to build, write, and compete alongside other students.</p>
+      <p>My approach stays the same whether I'm writing code or writing captions: understand the subject fully, then present it as simply as possible.</p>
+      <div class="mjg-tags">
+        <span>Web Development</span>
+        <span>UI/UX</span>
+        <span>Photojournalism</span>
+        <span>Problem Solving</span>
+        <span>Git &amp; Version Control</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mjg-work" id="work">
+  <div class="mjg-wrap">
+    <div class="mjg-section-head mjg-reveal">
+      <span class="mjg-kicker">Selected Work</span>
+      <h2>Projects &amp; Certificates</h2>
+      <p>A mix of hands-on builds and the credentials behind them. Hover over a certificate; on touch devices, tap it to bring it front and center.</p>
+    </div>
+
+    <div class="mjg-subtabs mjg-reveal"><span>Projects</span></div>
+    <div class="mjg-project-grid mjg-reveal">
+      <div class="mjg-project-card">
+        <h3>N/A</h3>
+        <p>Description. Coming Soon</p>
+        <div class="mjg-project-links">
+          <a href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05A9.28 9.28 0 0 1 12 6.84c.85 0 1.71.12 2.51.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .28.18.61.69.5A10.03 10.03 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg> GitHub</a>
+          <a href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7.71 3.5 1.15 15l3.28 5.68L11 9.18 7.71 3.5zM9.07 21.5h9.79L22.85 15h-9.79l-3.99 6.5zM12.99 9.18l6.65 11.5L22.85 15 16.28 3.5l-3.29 5.68z"/></svg> Drive</a>
+        </div>
+      </div>
+      <div class="mjg-project-card">
+        <h3>N/A</h3>
+        <p>Description. Coming Soon</p>
+        <div class="mjg-project-links">
+          <a href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05A9.28 9.28 0 0 1 12 6.84c.85 0 1.71.12 2.51.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .28.18.61.69.5A10.03 10.03 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg> GitHub</a>
+          <a href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7.71 3.5 1.15 15l3.28 5.68L11 9.18 7.71 3.5zM9.07 21.5h9.79L22.85 15h-9.79l-3.99 6.5zM12.99 9.18l6.65 11.5L22.85 15 16.28 3.5l-3.29 5.68z"/></svg> Drive</a>
+        </div>
+      </div>
+      <div class="mjg-project-card">
+        <h3>N/A</h3>
+        <p>Description. Coming Soon</p>
+        <div class="mjg-project-links">
+          <a href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05A9.28 9.28 0 0 1 12 6.84c.85 0 1.71.12 2.51.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .28.18.61.69.5A10.03 10.03 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg> GitHub</a>
+          <a href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7.71 3.5 1.15 15l3.28 5.68L11 9.18 7.71 3.5zM9.07 21.5h9.79L22.85 15h-9.79l-3.99 6.5zM12.99 9.18l6.65 11.5L22.85 15 16.28 3.5l-3.29 5.68z"/></svg> Drive</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mjg-subtabs mjg-reveal" style="margin-top:60px;"><span>Certificates</span></div>
+    <p class="mjg-cert-note mjg-reveal"><strong>Tip:</strong> hover (or tap on mobile) any certificate to view it up close.</p>
+    <div class="mjg-cert-grid mjg-reveal">
+      <div class="mjg-cert-card" tabindex="0" data-img="certs/responsive-web-design.jpg">
+        <div class="mjg-cert-thumb"><img src="certs/responsive-web-design.jpg" alt="" loading="lazy" decoding="async"></div>
+        <div class="mjg-mark"><svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <div>
+          <h4>Legacy Responsive Web Design V8</h4>
+          <div class="mjg-issuer">freeCodeCamp</div>
+          <div class="mjg-date">August 19, 2026</div>
+        </div>
+        <div class="mjg-expand-hint">View</div>
+      </div>
+      <div class="mjg-cert-card" tabindex="0" data-img="certs/git-training.jpg">
+        <div class="mjg-cert-thumb"><img src="certs/git-training.jpg" alt="" loading="lazy" decoding="async"></div>
+        <div class="mjg-mark"><svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <div>
+          <h4>Git Training</h4>
+          <div class="mjg-issuer">Simplilearn</div>
+          <div class="mjg-date">September 11, 2026</div>
+        </div>
+        <div class="mjg-expand-hint">View</div>
+      </div>
+      <div class="mjg-cert-card" tabindex="0" data-img="certs/javascript-essentials-1.jpg">
+        <div class="mjg-cert-thumb"><img src="certs/javascript-essentials-1.jpg" alt="" loading="lazy" decoding="async"></div>
+        <div class="mjg-mark"><svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <div>
+          <h4>JavaScript Essentials 1</h4>
+          <div class="mjg-issuer">Cisco Networking Academy &middot; JS Institute</div>
+          <div class="mjg-date">September 14, 2026</div>
+        </div>
+        <div class="mjg-expand-hint">View</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="mjg-cert-backdrop" id="certBackdrop"></div>
+<div class="mjg-cert-stage" id="certStage" aria-hidden="true">
+  <img class="mjg-cert-img" id="certStageImg" alt="">
+  <div class="mjg-mark"><svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+  <div>
+    <h4 id="certStageTitle"></h4>
+    <div class="mjg-issuer" id="certStageIssuer"></div>
+    <div class="mjg-date" id="certStageDate"></div>
+  </div>
+</div>
+
+<section class="mjg-contact" id="contact">
+  <div class="mjg-wrap">
+    <span class="mjg-kicker" style="color:var(--mjg-gold)">Contact</span>
+    <h2>Let's build something worth showing.</h2>
+    <p class="mjg-lead">Open to dev work, design collaborations, or a conversation about your next project. The fastest way to reach me is email.</p>
+    <div class="mjg-contact-grid">
+      <div class="mjg-contact-item">
+        <div class="mjg-lab">Email</div>
+        <a href="mailto:markgalvez727@gmail.com">markgalvez727@gmail.com</a>
+      </div>
+      <div class="mjg-contact-item">
+        <div class="mjg-lab">LinkedIn</div>
+        <a href="https://www.linkedin.com/in/mark-jaiden-galvez-553943299/" target="_blank" rel="noopener">Mark Jaiden Galvez</a>
+      </div>
+      <div class="mjg-contact-item">
+        <div class="mjg-lab">Based in</div>
+        <span>Holy Angel University</span>
+      </div>
+      <div class="mjg-contact-item">
+        <div class="mjg-lab">Currently</div>
+        <span>Open to opportunities</span>
+      </div>
+    </div>
+    <div class="mjg-contact-cta">
+      <a class="mjg-btn-fill" href="mailto:markgalvez727@gmail.com">Send a Message
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="mjg-wrap">
+    <span>&copy; 2026 Mark Jaiden Galvez.</span>
+    <span>Built with code, coffee, and a camera.</span>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('is-solid', window.scrollY > 40);
+}, {passive:true});
+
+const burger = document.getElementById('burger');
+const panel = document.getElementById('mobilePanel');
+burger.addEventListener('click', () => {
+  burger.classList.toggle('is-open');
+  panel.classList.toggle('is-open');
+});
+panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  burger.classList.remove('is-open');
+  panel.classList.remove('is-open');
+}));
+
+const revealEls = document.querySelectorAll('.mjg-reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('is-in');
+      io.unobserve(e.target);
+    }
+  });
+}, {threshold:.15});
+revealEls.forEach(el => io.observe(el));
+
+const stage = document.getElementById('certStage');
+const backdrop = document.getElementById('certBackdrop');
+const stageImg = document.getElementById('certStageImg');
+const stageTitle = document.getElementById('certStageTitle');
+const stageIssuer = document.getElementById('certStageIssuer');
+const stageDate = document.getElementById('certStageDate');
+const certCards = document.querySelectorAll('.mjg-cert-card');
+const isTouch = matchMedia('(hover: none), (pointer: coarse)').matches;
+
+function openCert(card) {
+  stageTitle.textContent = card.querySelector('h4').textContent;
+  stageIssuer.textContent = card.querySelector('.mjg-issuer').textContent;
+  stageDate.textContent = card.querySelector('.mjg-date').textContent;
+  const src = card.dataset.img;
+  if (src) {
+    stageImg.src = src;
+    stageImg.alt = stageTitle.textContent + ' certificate';
+    stage.classList.add('has-photo');
+  } else {
+    stageImg.removeAttribute('src');
+    stage.classList.remove('has-photo');
+  }
+  stage.classList.add('is-shown');
+  stage.setAttribute('aria-hidden', 'false');
+  backdrop.classList.add('is-shown');
+}
+
+function closeCert() {
+  stage.classList.remove('is-shown');
+  stage.setAttribute('aria-hidden', 'true');
+  backdrop.classList.remove('is-shown');
+}
+
+if (isTouch) {
+  let openCard = null;
+  certCards.forEach(card => {
+    card.addEventListener('click', () => {
+      if (openCard === card) {
+        closeCert();
+        openCard = null;
+      } else {
+        openCert(card);
+        openCard = card;
+      }
+    });
+  });
+  backdrop.addEventListener('click', () => { closeCert(); openCard = null; });
+} else {
+  certCards.forEach(card => {
+    card.addEventListener('mouseenter', () => openCert(card));
+    card.addEventListener('mouseleave', closeCert);
+    card.addEventListener('focus', () => openCert(card));
+    card.addEventListener('blur', closeCert);
+  });
+}
+</script>
+</body>
+</html>
