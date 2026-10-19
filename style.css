@@ -234,6 +234,7 @@ section{padding:100px 0;}
 /* appear on screen when clicked */
 .mjg-project-card:active{transform:translateY(-8px);border-color:rgba(17,34,80,0);}
 .mjg-project-card:active::after{opacity:1;}
+.mjg-project-card h3{color:var(--mjg-navy);font-size:1.2rem;}
 .mjg-project-card p{color:#4b5670;font-size:.9rem;line-height:1.6;margin-top:10px;min-height:3.4em;}
 .mjg-project-links{display:flex;gap:14px;margin-top:20px;}
 .mjg-project-links a{
@@ -259,7 +260,7 @@ section{padding:100px 0;}
   will-change:transform;
   z-index:1;
 }
-.mjg-cert-card:hover,.mjg-cert-card:focus-visible{transform:translateY(-6px);}
+.mjg-cert-card:active{transform:translateY(-6px);}
 .mjg-cert-card::before{
   content:"";position:absolute;inset:0;
   background:radial-gradient(circle at 85% 15%, rgba(224,197,144,.22), transparent 55%);
@@ -273,7 +274,7 @@ section{padding:100px 0;}
   position:absolute;bottom:16px;right:18px;color:var(--mjg-mauve);font-size:.64rem;letter-spacing:.6px;
   opacity:0;transition:opacity .3s ease;text-transform:uppercase;
 }
-.mjg-cert-card:hover .mjg-expand-hint{opacity:.8;}
+.mjg-cert-card:active .mjg-expand-hint{opacity:.8;}
 
 /* enlarged certificate */
 .mjg-cert-stage{

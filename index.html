@@ -18,7 +18,7 @@
 .mjg-cert-thumb{position:absolute;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
 .mjg-cert-thumb img{width:100%;height:100%;object-fit:cover;display:block;filter:blur(6px) saturate(.9);transform:scale(1.12);opacity:.6;transition:filter .35s ease,opacity .35s ease}
 .mjg-cert-thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,18,56,.35) 0%,rgba(8,18,56,.8) 100%)}
-.mjg-cert-card:hover .mjg-cert-thumb img,.mjg-cert-card:focus .mjg-cert-thumb img{filter:blur(2px);opacity:.8}
+.mjg-cert-card:active .mjg-cert-thumb img{filter:blur(2px);opacity:.8}
 </style>
 </head>
 <body>
@@ -36,7 +36,7 @@
       <li><a href="#work">Projects &amp; Certificates</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a class="mjg-nav-cta" href="#contact">Contact Me</a>
+    <a class="mjg-nav-cta" href="#contact">Let's Talk</a>
     <button class="mjg-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
@@ -128,7 +128,7 @@
     <div class="mjg-section-head mjg-reveal">
       <span class="mjg-kicker">Selected Work</span>
       <h2>Projects &amp; Certificates</h2>
-      <p>Projects I've built and certificates I've earned. Hover over a certificate to preview it; on touch devices, tap it.</p>
+      <p>Projects I've built and certificates I've earned. Click a certificate to preview it; on touch devices, tap it.</p>
     </div>
 
     <div class="mjg-subtabs mjg-reveal"><span>Projects</span></div>
@@ -142,10 +142,10 @@
         </div>
       </div>
       <div class="mjg-project-card">
-        <h3><h3>Metrogate HOA Portal</h3></h3>
+        <h3>Metrogate HOA Portal</h3>
         <p>A resident portal web app for a homeowners association in Angeles City.</p>
         <div class="mjg-project-links">
-          <a href="https://github.com/mjgalvez0608/Metrogate-Website-Deployment"" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05A9.28 9.28 0 0 1 12 6.84c.85 0 1.71.12 2.51.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .28.18.61.69.5A10.03 10.03 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg> GitHub</a>
+          <a href="https://github.com/mjgalvez0608/Metrogate-Website-Deployment" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05A9.28 9.28 0 0 1 12 6.84c.85 0 1.71.12 2.51.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .28.18.61.69.5A10.03 10.03 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg> GitHub</a>
           <a href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7.71 3.5 1.15 15l3.28 5.68L11 9.18 7.71 3.5zM9.07 21.5h9.79L22.85 15h-9.79l-3.99 6.5zM12.99 9.18l6.65 11.5L22.85 15 16.28 3.5l-3.29 5.68z"/></svg> Drive</a>
         </div>
       </div>
@@ -306,28 +306,25 @@ function closeCert() {
   backdrop.classList.remove('is-shown');
 }
 
-if (isTouch) {
-  let openCard = null;
-  certCards.forEach(card => {
-    card.addEventListener('click', () => {
-      if (openCard === card) {
-        closeCert();
-        openCard = null;
-      } else {
-        openCert(card);
-        openCard = card;
-      }
-    });
+let openCard = null;
+certCards.forEach(card => {
+  card.addEventListener('click', () => {
+    if (openCard === card) {
+      closeCert();
+      openCard = null;
+    } else {
+      openCert(card);
+      openCard = card;
+    }
   });
-  backdrop.addEventListener('click', () => { closeCert(); openCard = null; });
-} else {
-  certCards.forEach(card => {
-    card.addEventListener('mouseenter', () => openCert(card));
-    card.addEventListener('mouseleave', closeCert);
-    card.addEventListener('focus', () => openCert(card));
-    card.addEventListener('blur', closeCert);
+  card.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); }
   });
-}
+});
+backdrop.addEventListener('click', () => { closeCert(); openCard = null; });
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') { closeCert(); openCard = null; }
+});
 </script>
 </body>
-</html><!-- update -->
+</html>
