@@ -233,7 +233,7 @@ section{padding:100px 0;}
 
 /* lift on hover */
 .mjg-project-card:hover{transform:translateY(-8px);border-color:rgba(17,34,80,0);}
-.mjg-project-card:hover::after{opacity:1;}
+.mjg-project-card::before{content:"";position:absolute;left:0;right:0;bottom:-10px;height:10px;}
 .mjg-project-card h3{color:var(--mjg-navy);font-size:1.2rem;}
 .mjg-project-card p{color:#4b5670;font-size:.9rem;line-height:1.6;margin-top:10px;min-height:3.4em;}
 .mjg-project-links{display:flex;gap:14px;margin-top:20px;}
